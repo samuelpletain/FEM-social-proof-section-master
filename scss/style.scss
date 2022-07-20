@@ -1,0 +1,101 @@
+@import "variables";
+@import "mixins";
+@import "blocks/intro";
+@import "blocks/stars";
+@import "blocks/rating";
+@import "blocks/testimony";
+@import "blocks/person";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+  font-family: 'Spartan', sans-serif;
+}
+
+.page {
+  background: url("../images/bg-pattern-top-mobile.svg") top center no-repeat, url("../images/bg-pattern-bottom-mobile.svg") bottom center no-repeat;
+
+  @include breakpoint-lg {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    min-height: 100vh;
+    background-position-x: -4rem, 21rem;
+  }
+}
+
+.main {
+  @include breakpoint-lg {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 7rem;
+  }
+}
+
+.rating_display {
+  padding: 1.5rem;
+
+  & .rating:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint-lg {
+    width: 50%;
+    padding: 1.5rem 0;
+
+    & .rating:nth-child(1) {
+      margin-right: 4rem;
+
+      @include breakpoint-lg {
+        margin-right: 6rem;
+      }
+    }
+
+    & .rating:nth-child(2) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+
+      @include breakpoint-lg {
+        margin-right: 3rem;
+        margin-left: 3rem;
+      }
+    }
+
+    & .rating:nth-child(3) {
+      margin-left: 4rem;
+
+      @include breakpoint-lg {
+        margin-left: 6rem;
+      }
+    }
+  }
+}
+
+.testimony_display {
+  padding: 1.5rem;
+
+  @include breakpoint-lg {
+    display: flex;
+    gap: 1.5rem;
+    padding: 4rem 0 2rem;
+
+    & .testimony:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+
+    & .testimony:nth-child(2) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    & .testimony:nth-child(3) {
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}

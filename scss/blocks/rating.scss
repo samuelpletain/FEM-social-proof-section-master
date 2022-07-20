@@ -1,0 +1,25 @@
+.rating {
+  background-color: $neutral-light;
+  border-radius: 10px;
+  padding: 1rem;
+  @include breakpoint-lg {
+    display: flex;
+    padding-left: 2rem;
+    gap: 2rem;
+    align-items: center;
+  }
+  &__stars {
+    padding-bottom: 1rem;
+    @include breakpoint-lg {
+      padding-bottom: 0;
+    }
+  }
+  &__content {
+    font-weight: 700;
+    color: $primary;
+    text-align: center;
+    @include breakpoint-lg {
+      font-size: .9rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.testimony {
+  background-color: $primary;
+  border-radius: 10px;
+  padding: 2rem;
+  color: $white;
+  margin-bottom: 1rem;
+  @include breakpoint-lg {
+    padding: 2.5rem 2rem;
+  }
+  &__content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    @include breakpoint-lg {
+      font-size: .9rem;
+    }
+  }
+}

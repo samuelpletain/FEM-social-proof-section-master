@@ -1,0 +1,8 @@
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  &__img {
+    padding: .25rem;
+  }
+}
