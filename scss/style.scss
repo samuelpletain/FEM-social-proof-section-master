@@ -99,3 +99,10 @@ html {
     }
   }
 }
+
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+  .main {
+    margin: 0;
+    padding: 7rem 2rem 0;
+  }
+}
